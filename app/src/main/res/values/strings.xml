@@ -3,4 +3,11 @@
     <string name="text_click_here">Click here</string>
     <string name="text_click_to_move_to_another_activity">Click to move to another activity</string>
     <string name="text_this_is_second_activity">This is Second Activity</string>
+    <string name="text_email">Email</string>
+    <string name="text_sign_in">Sign In</string>
+    <string name="text_remember_me">Remember me</string>
+    <string name="text_still_don_t_have_account">Still don\'t have account?</string>
+    <string name="text_sign_up">Sign Up</string>
+    <string name="text_sign_in_with_your_account">Sign In with your account</string>
+    <string name="text_title">karma</string>
 </resources>

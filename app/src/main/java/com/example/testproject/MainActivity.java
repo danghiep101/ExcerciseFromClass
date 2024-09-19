@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        Toast.makeText(this, "Hello World", Toast.LENGTH_LONG).show();
 //        Intent intent1 = new Intent(Intent.ACTION_SEND);
 //        Bundle myBundle = new Bundle();
-        Intent intent = new Intent(this, SecondActivity.class);
+        Intent intent = new Intent(this, NewsFeedActivity.class);
         intent.putExtra("KEY_EXTRA", "this is Data from Intent");
         startActivity(intent);
     }

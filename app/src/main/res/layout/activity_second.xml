@@ -7,13 +7,33 @@
     android:layout_height="match_parent"
     tools:context=".SecondActivity">
 
+    <Button
+        android:id="@+id/btn_devide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="Thương"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_mutiply"
+        app:layout_constraintStart_toEndOf="@+id/btn_mutiply"
+        app:layout_constraintTop_toTopOf="@+id/btn_mutiply" />
+
+    <Button
+        android:id="@+id/btn_mutiply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="Tích"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_subtract"
+        app:layout_constraintStart_toEndOf="@+id/btn_subtract"
+        app:layout_constraintTop_toTopOf="@+id/btn_subtract" />
+
     <EditText
         android:id="@+id/edt_A"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="128dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginEnd="20dp"
         android:ems="10"
         android:hint="Nhap A"
         android:inputType="number"
@@ -53,9 +73,10 @@
         android:id="@+id/btn_caculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="96dp"
         android:text="Tổng"
         app:layout_constraintEnd_toEndOf="@+id/edt_result"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/edt_result"
         app:layout_constraintTop_toBottomOf="@+id/edt_result" />
 
@@ -69,4 +90,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_subtract"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="Hiệu"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_caculate"
+        app:layout_constraintStart_toEndOf="@+id/btn_caculate"
+        app:layout_constraintTop_toTopOf="@+id/btn_caculate"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

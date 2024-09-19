@@ -17,7 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText editTextA, editTextB, editTextResult;
-    private Button btnCaculate, btnBack;
+    private Button btnCaculate, btnBack, btnSubtract, btnDevide, btnMuiply;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +34,40 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
             }
         });
 
+        btnSubtract.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int A = Integer.parseInt("0" + editTextA.getText().toString());
+                int B = Integer.parseInt("0" + editTextB.getText().toString());
+                int result = A - B;
+                editTextResult.setText(String.valueOf(result));
+            }
+        });
+
+        btnMuiply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int A = Integer.parseInt("0" + editTextA.getText().toString());
+                int B = Integer.parseInt("0" + editTextB.getText().toString());
+                int result = A * B;
+                editTextResult.setText(String.valueOf(result));
+            }
+        });
+
+        btnDevide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int A = Integer.parseInt("0" + editTextA.getText().toString());
+                int B = Integer.parseInt("0" + editTextB.getText().toString());
+                if(B == 0){
+                    editTextB.setError("B cannot be 0");
+                }else {
+                    int result = A / B;
+                    editTextResult.setText(String.valueOf(result));
+                }
+
+            }
+        });
     }
 
     private void initView() {
@@ -41,6 +75,9 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         editTextB =findViewById(R.id.edt_B);
         editTextResult =findViewById(R.id.edt_result);
         btnCaculate = findViewById(R.id.btn_caculate);
+        btnSubtract = findViewById(R.id.btn_subtract);
+        btnDevide = findViewById(R.id.btn_devide);
+        btnMuiply = findViewById(R.id.btn_mutiply);
         btnBack = findViewById(R.id.btn_back);
     }
 
